@@ -141,4 +141,4 @@ npm run test:e2e
 
 ## License
 
-[MIT](LICENSE) © 2026 [zenaszou](https://github.com/zenaszou)
+[MIT](LICENSE) © 2026 [Zenas](https://github.com/zenaszou)
