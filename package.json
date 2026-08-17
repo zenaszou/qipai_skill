@@ -1,0 +1,35 @@
+{
+  "name": "qipai-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local shared HTML game board for real-time Human × Agent play.",
+  "author": "zenaszou",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test qipai/tests/chess-engine.test.mjs qipai/tests/engine.test.mjs qipai/tests/protocol.test.mjs qipai/tests/xiangqi-engine.test.mjs",
+    "test:chess": "node --test qipai/tests/chess-engine.test.mjs",
+    "test:renju": "node --test qipai/tests/engine.test.mjs",
+    "test:xiangqi": "node --test qipai/tests/xiangqi-engine.test.mjs",
+    "test:protocol": "node --test qipai/tests/protocol.test.mjs",
+    "test:e2e": "node --test qipai/tests/browser-e2e.test.mjs",
+    "check:package": "node scripts/check-package.mjs",
+    "check": "npm run check:package && npm test",
+    "screenshot": "node scripts/capture-screenshot.mjs",
+    "package:release": "bash scripts/package-release.sh"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenaszou/qipai_skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zenaszou/qipai_skill/issues"
+  },
+  "homepage": "https://github.com/zenaszou/qipai_skill#readme"
+}

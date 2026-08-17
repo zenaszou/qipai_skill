@@ -1,0 +1,4 @@
+interface:
+  display_name: "棋牌 · Human × Agent"
+  short_description: "通过共享 HTML 棋盘与 Agent 实时对弈三种棋类"
+  default_prompt: "Use $qipai to start a live supported board game with me."

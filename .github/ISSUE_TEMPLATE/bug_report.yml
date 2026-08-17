@@ -1,0 +1,40 @@
+name: Bug report
+description: 报告可复现的规则、协议、CLI 或界面问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题描述
+      description: 请说明实际行为与预期行为。
+    validations:
+      required: true
+  - type: dropdown
+    id: game
+    attributes:
+      label: 游戏
+      options:
+        - Renju
+        - Chess
+        - Xiangqi
+        - Shared protocol / UI
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      placeholder: macOS 15, Node.js 22, Codex
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请提供局面、着法、命令或最小复现。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或截图
+      render: shell

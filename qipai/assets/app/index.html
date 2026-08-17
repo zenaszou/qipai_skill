@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>棋牌 · Human × Agent</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="棋牌 Human Agent">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span><strong>共弈</strong><small>HUMAN × AGENT</small></span>
+      </a>
+      <div id="connection" class="connection connecting" role="status">
+        <i aria-hidden="true"></i><span>正在连接</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">A SHARED TURN-BASED CANVAS</p>
+          <h1>你行动，<em>Agent 立刻知道。</em></h1>
+        </div>
+        <p>
+          双方注视同一份游戏状态。轮到你时棋盘解锁；轮到 Agent
+          时，你只需等待它的回应。
+        </p>
+      </section>
+
+      <section class="workspace">
+        <article class="board-card">
+          <header class="board-header">
+            <div>
+              <p id="board-kicker" class="kicker">LIVE GAME</p>
+              <h2 id="game-title">共享棋盘</h2>
+            </div>
+            <div id="roles" class="roles"></div>
+          </header>
+          <div class="board-scroll">
+            <div id="board-shell" class="board-shell">
+              <div id="column-labels" class="column-labels" aria-hidden="true"></div>
+              <div id="row-labels" class="row-labels" aria-hidden="true"></div>
+              <div
+                id="board"
+                class="board"
+                role="grid"
+                aria-label="共享棋盘"
+                aria-describedby="board-caption"
+              ></div>
+            </div>
+          </div>
+          <footer id="board-caption" class="board-caption">正在载入规则。</footer>
+        </article>
+
+        <aside class="sidebar">
+          <section class="turn-card">
+            <p class="kicker">CURRENT TURN</p>
+            <div class="turn-line">
+              <span id="turn-icon" class="turn-icon neutral" aria-hidden="true"></span>
+              <div>
+                <h2 id="turn-heading">等待棋局</h2>
+                <p id="turn-detail">正在读取共享状态。</p>
+              </div>
+            </div>
+            <dl class="metrics">
+              <div><dt>手数</dt><dd id="move-count">0</dd></div>
+              <div><dt>最后动作</dt><dd id="last-move">—</dd></div>
+              <div><dt>版本</dt><dd id="revision">0</dd></div>
+            </dl>
+          </section>
+
+          <section class="bridge-card">
+            <div class="bridge-signal" aria-hidden="true"><i></i></div>
+            <div>
+              <strong id="bridge-title">事件桥已就绪</strong>
+              <p id="bridge-copy">你不需要在聊天里报告动作。</p>
+            </div>
+          </section>
+
+          <section class="history-card">
+            <header>
+              <div>
+                <p class="kicker">SHARED MEMORY</p>
+                <h2>对局记录</h2>
+              </div>
+            </header>
+            <ol id="history" class="history">
+              <li class="history-empty">第一步之后，这里会成为共同记忆。</li>
+            </ol>
+            <div class="actions">
+              <button id="swap" type="button">交换执子</button>
+              <button id="restart" type="button">重新开始</button>
+              <button id="resign" class="danger" type="button">认输</button>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <dialog id="promotion-dialog" class="promotion-dialog">
+      <form method="dialog">
+        <p class="kicker">PAWN PROMOTION</p>
+        <h2>选择升变棋子</h2>
+        <div id="promotion-options" class="promotion-options"></div>
+        <button class="cancel-promotion" value="cancel">取消</button>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="screen-reader-status" class="sr-only" aria-live="assertive"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
