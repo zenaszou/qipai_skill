@@ -7,6 +7,14 @@
 
 ![Qipai 国际象棋共享棋盘](docs/qipai-chess.png)
 
+> **Vibe Coding 日记**
+>
+> 第1天：打牌<br>
+> 第2天：打牌<br>
+> .......<br>
+> 第5天：怎么可以如此堕落！<br>
+> 第6天：打牌
+
 当前支持：
 
 - 严格连珠（Renju / Gomoku / 五子棋）
