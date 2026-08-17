@@ -1,3 +1,11 @@
+> **Vibe Coding 日记**
+>
+> 第1天：打牌<br>
+> 第2天：打牌<br>
+> .......<br>
+> 第5天：怎么可以如此堕落！不能再这样下去了！<br>
+> 第6天：打牌
+
 # Qipai Skill
 
 一个让人类和 AI Agent 通过共享本地 HTML 界面实时对弈的实验性 Skill。
@@ -6,14 +14,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ![Qipai 国际象棋共享棋盘](docs/qipai-chess.png)
-
-> **Vibe Coding 日记**
->
-> 第1天：打牌<br>
-> 第2天：打牌<br>
-> .......<br>
-> 第5天：怎么可以如此堕落！<br>
-> 第6天：打牌
 
 当前支持：
 
